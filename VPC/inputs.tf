@@ -21,3 +21,51 @@ variable "subnet_tag_name" {
   description = "This is the value to set the subnet name"
 
 }
+
+variable "all_port" {
+    type = number
+    default = 0
+    description = "all ports"
+  
+}
+variable "all_protocol" {
+    type = number
+    default = -1
+    description = "all protocols"
+  
+}
+variable "anywhere_ip" {
+    type = string
+    default = "0.0.0.0/0"
+    description = "all ip"
+  
+}
+variable "ssh_port" {
+    type = number
+    default = 22
+    description = "ssh port"
+  
+}
+variable "tcp_protocol" {
+    type = string
+    default = "tcp"
+    description = "tcp protocol"
+  
+}
+variable "http_port" {
+    type = number
+    default = 80
+    description = "http port"
+  
+}
+variable "custom_tcp_port" {
+    type = number
+    default = 8080
+    description = "8080  port"
+  
+}
+variable "ipv6_address" {
+    type = string
+    default = "::/0"
+    description = "all ipv6"
+}
