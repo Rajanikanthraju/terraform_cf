@@ -9,15 +9,15 @@ variable "vpc_cidr" {
   description = "This is default CIDR"
 
 }
-variable "no_of_subnets" {
+variable "no_of_resources" {
   type        = number
-  default     = 16
+  default     = 2
   description = "This is to set count no of required resources"
 
 }
 variable "subnet_tag_name" {
   type        = string
-  default     = "subnetfromtf"
+  default     = "web"
   description = "This is the value to set the subnet name"
 
 }
@@ -68,4 +68,21 @@ variable "ipv6_address" {
     type = string
     default = "::/0"
     description = "all ipv6"
+}
+
+variable "ami" {
+    type = string
+    default = "ami-0af2f764c580cc1f9"
+    description = "this is default ami"
+}
+variable "instance_type" {
+    type = string
+    default = "t2.micro"
+    description = "default instance type"
+  
+}
+variable "key_path" {
+    type = string
+    default = "~/.ssh/id_rsa.pub"
+    description = "public key"  
 }
